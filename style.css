@@ -294,6 +294,7 @@ nav {
   display: inline-block;
   transform: rotate(1deg);
   color: #fff;
+  text-decoration: underline;
 }
 
 .hero p {

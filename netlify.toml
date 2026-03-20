@@ -1,0 +1,25 @@
+[[redirects]]
+from = "/*"
+to = "/en/404.html"
+status = 404
+force = false
+  
+[[redirects]]
+from = "/en"
+to = "/index.html"
+status = 302
+
+[[redirects]]
+from = "/en/*"
+to = "/en/404.html"
+status = 404
+
+[[redirects]]
+from = "/kr/*"
+to = "/kr/404.html"
+status = 404
+
+[[redirects]]
+from = "/kr/*"
+to = "/kr/404.html"
+status = 404
