@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Encore Karaoke" />
-    <meta name="description" content="Be The Star with Encore Karaoke." />
+    <meta
+      name="description"
+      content="Be The Star with Encore Karaoke. The ultimate open-source Filipino karaoke app."
+    />
     <meta
       name="keywords"
-      content="videoke, karaoke, karaoke player, karaoke software"
+      content="videoke, karaoke, karaoke player, open source"
     />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="1 days" />
     <title>Encore Karaoke - Be The Star</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,8 +28,10 @@
     <nav>
       <div class="nav-logo">Encore</div>
       <div class="nav-links">
-        <!-- <a href="#control" target="_blank">Songbook</a> -->
-        <a href="request.html" target="_blank">Request Song</a>
+        <a href="https://studio.encorekaraoke.org" target="_blank"
+          >MIDI Studio</a
+        >
+        <a href="#features">Features</a>
         <a
           href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke/releases"
           class="btn btn-nav"
@@ -37,91 +40,197 @@
         >
       </div>
     </nav>
+
     <section class="hero">
-      <h1 class="scroll-anim">
-        Become the <span class="text-highlight-gold">star</span><br />that
-        <span class="text-highlight-orange">shines bright</span>.
-      </h1>
-      <p class="scroll-anim delay-1">
-        Encore Karaoke is the open-source karaoke player that makes
-        professional-quality karaoke affordable, accessible, and completely
-        unforgettable.
-      </p>
-      <div class="hero-buttons scroll-anim delay-2">
-        <a
-          href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke/releases"
-          class="btn btn-gold"
-          target="_blank"
-          >Start Singing Free</a
-        >
-        <a href="#features" class="btn btn-outline">Explore Features</a>
-      </div>
-    </section>
-    <section id="features" class="section section-alt">
-      <div class="section-header scroll-anim">
-        <h2 class="section-title">
-          <span class="text-highlight-gold">Be the Star</span> with These
-          Features
-        </h2>
-        <p class="section-subtitle">
-          The Asian karaoke experience you know and love, all inside Encore.
+      <canvas id="constellation-bg"></canvas>
+      <div class="hero-content">
+        <h1>
+          <span class="hero-text-part" style="animation-delay: 0s"
+            >Become the</span
+          >
+          <span class="text-highlight-gold hero-badge-gold">star</span><br />
+          <span class="hero-text-part" style="animation-delay: 0.25s"
+            >that</span
+          >
+          <span class="text-highlight-orange hero-badge-orange"
+            >shines bright</span
+          ><span class="hero-text-part" style="animation-delay: 0.45s">.</span>
+        </h1>
+        <p class="hero-fade-in" style="animation-delay: 0.55s">
+          Encore Karaoke is the open-source karaoke player made by people who
+          live and breathe karaoke, for everyone that does too.
         </p>
+        <div class="hero-buttons hero-fade-in" style="animation-delay: 0.7s">
+          <a
+            href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke/releases"
+            class="btn btn-gold"
+            target="_blank"
+            >Start Singing Free</a
+          >
+        </div>
       </div>
-      <div class="grid">
-        <div class="card scroll-anim">
-          <div class="card-icon">🎵</div>
-          <h3>Authentic Videoke Sound</h3>
-          <p>
-            <i>Biritera</i> or not, Encore provides the authentic videoke
-            experience; from a sound that replicates real systems to the
-            tradition of entering codes to queue up a song!
-          </p>
+
+      <div
+        class="scroll-indicator-wrapper hero-fade-in"
+        style="animation-delay: 1s"
+      >
+        <a href="#features" class="scroll-indicator">
+          <span>Scroll for more</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-header scroll-anim">
+        <h2 class="section-title">By karaoke lovers, for karaoke lovers.</h2>
+      </div>
+
+      <div class="feature-container scroll-anim delay-1">
+        <div class="showcase-display">
+          <div class="showcase-item active" id="showcase-sound">
+            <span>Sound Like a Star Visual Placeholder</span>
+          </div>
+          <div class="showcase-item" id="showcase-record">
+            <span>Record Like a Star Visual Placeholder</span>
+          </div>
+          <div class="showcase-item" id="showcase-sessions">
+            <span>Feel Like a Star Visual Placeholder</span>
+          </div>
         </div>
 
-        <div class="card scroll-anim delay-1">
-          <div class="card-icon">📺</div>
-          <h3>Sing, Dance, or Both!</h3>
-          <p>
-            Belt out your favorite tunes backed by stunning, high-quality music
-            videos. Sing, dance to your favorite tunes, or do both!
-          </p>
+        <div class="feature-tabs">
+          <div class="feature-tab active" data-target="showcase-sound">
+            <h3>Sound Like a Star</h3>
+            <p>
+              Enhance your voice and let it shine with Encore's audio mixer!
+              Have full control and sound just like a recording artist.
+            </p>
+          </div>
+          <div class="feature-tab" data-target="showcase-record">
+            <h3>Record Like a Star</h3>
+            <p>
+              Create covers in minutes, not hours. Turn your karaoke night into
+              a memory you'd never forget with Encore's Video Recording feature!
+            </p>
+          </div>
+          <div class="feature-tab" data-target="showcase-sessions">
+            <h3>Feel Like a Star</h3>
+            <p>
+              Stars perform their best knowing their biggest fan could be
+              listening. Perform the best by inviting your #1 fan in life with
+              Encore Sessions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="more-features">
+        <div class="section-header scroll-anim">
+          <h3 class="section-title" style="font-size: 2.5rem; margin-top: 6rem">
+            Everything you need to run the show.
+          </h3>
         </div>
 
-        <div class="card scroll-anim delay-2">
-          <div class="card-icon">🎙️</div>
-          <h3>Capture the Magic</h3>
-          <p>
-            Don't let that perfect high note fade away. Hit record and instantly
-            save your vocal performance to listen back to later or share the
-            laughs with friends.
-          </p>
+        <div class="bento-grid">
+          <div class="bento-item scroll-anim delay-1">
+            <div class="bento-icon">
+              <ion-icon name="folder-open-outline"></ion-icon>
+            </div>
+            <div class="bento-text">
+              <h4>Versatile Compatibility</h4>
+              <p>
+                Fully compatible with MIDI, popular audio formats such as MP3
+                (+G), WAV, and M4A, and video formats like MP4 and WebM.
+              </p>
+            </div>
+          </div>
+
+          <div class="bento-item scroll-anim delay-2">
+            <div class="bento-icon">
+              <ion-icon name="images-outline"></ion-icon>
+            </div>
+            <div class="bento-text">
+              <h4>Custom Visuals</h4>
+              <p>
+                Set the perfect stage. Easily load your own background video
+                loops or images to display behind your lyrics.
+              </p>
+            </div>
+          </div>
+
+          <div class="bento-item scroll-anim delay-1">
+            <div class="bento-icon">
+              <ion-icon name="language-outline"></ion-icon>
+            </div>
+            <div class="bento-text">
+              <h4>Automatic Romanization</h4>
+              <p>
+                Sing your favorite Japanese & Korean songs even if you can't
+                read a single character of them.
+              </p>
+            </div>
+          </div>
+
+          <div class="bento-item scroll-anim delay-2">
+            <div class="bento-icon">
+              <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <div class="bento-text">
+              <h4>Advanced Scoring</h4>
+              <p>
+                Compete with friends, or practice singing! Get real-time,
+                accurate feedback on your pitch and timing.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
     <footer id="download">
-      <div class="footer-logo scroll-anim">ENCORE KARAOKE</div>
-
-      <div class="footer-links scroll-anim delay-1">
-        <a href="https://company.encorekaraoke.org">Company</a>
-        <a href="mailto:sky@encorekaraoke.org">Support</a>
+      <div class="footer-grid">
+        <div class="footer-brand scroll-anim">
+          <h2>ENCORE KARAOKE</h2>
+          <p>
+            Making everyone feel like a star with our open-source karaoke
+            software.
+          </p>
+        </div>
+        <div class="footer-col scroll-anim delay-1">
+          <h4>Resources</h4>
+          <a
+            href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke/releases"
+            >Download
+          </a>
+          <a href="#features">Features</a>
+          <a href="request.html">Request a Song</a>
+        </div>
+        <div class="footer-col scroll-anim delay-2">
+          <h4>Connect</h4>
+          <a
+            href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke"
+            target="_blank"
+            >GitHub</a
+          >
+          <a href="https://company.encorekaraoke.org">Company</a>
+          <a href="mailto:sky@encorekaraoke.org">Support</a>
+        </div>
       </div>
-
-      <p
-        class="scroll-anim delay-2"
-        style="
-          font-size: 1.2rem;
-          color: #94a3b8;
-          max-width: 600px;
-          margin: 0 auto;
-        "
-      >
-        Making everyone feel like a star.
-      </p>
-
-      <div class="copyright scroll-anim delay-3">
-        Made with ❤️ by Encore Karaoke Labs. Based in Manila.
+      <div class="footer-bottom scroll-anim delay-3">
+        <div class="copyright">
+          &copy; 2026 Encore Karaoke Labs by Kessei, based in Manila.
+        </div>
+        <div class="made-with">Made by two people that bond over karaoke.</div>
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
