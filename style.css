@@ -338,9 +338,10 @@ nav {
 .feature-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 3rem;
 }
 
 .showcase-display {
@@ -388,8 +389,8 @@ nav {
 }
 
 .feature-tabs {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -672,8 +673,9 @@ footer {
   .showcase-display {
     aspect-ratio: 16/10;
   }
-  .feature-tabs {
+  .feature-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .footer-grid {
     grid-template-columns: 1fr;
