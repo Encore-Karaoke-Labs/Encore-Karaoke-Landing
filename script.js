@@ -197,3 +197,15 @@ featureTabs.forEach((tab, index) => {
     activateTab(currentTabIndex);
   });
 });
+
+const bentoImages = document.querySelectorAll(".bento-item img");
+
+bentoImages.forEach((img) => {
+  if (img.complete) {
+    img.classList.add("loaded");
+  } else {
+    img.addEventListener("load", () => {
+      img.classList.add("loaded");
+    });
+  }
+});
