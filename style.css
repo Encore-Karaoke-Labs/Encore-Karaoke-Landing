@@ -174,8 +174,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   padding: 0 5%;
   position: relative;
   overflow: hidden;
@@ -273,7 +273,7 @@ nav {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 @keyframes slideFadeIn {

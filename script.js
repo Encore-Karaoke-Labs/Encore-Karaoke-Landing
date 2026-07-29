@@ -23,7 +23,6 @@ const heroSection = document.querySelector(".hero");
 
 let width, height;
 let stars = [];
-let shootingStar = null;
 
 const mouse = {
   x: null,
@@ -122,67 +121,12 @@ class Star {
   }
 }
 
-class ShootingStar {
-  constructor() {
-    this.reset();
-  }
-
-  reset() {
-    this.x = Math.random() * width * 1.5;
-    this.y = 0;
-    this.len = Math.random() * 80 + 40;
-    this.speed = Math.random() * 10 + 6;
-    this.size = Math.random() * 1.5 + 0.5;
-    this.active = false;
-    this.waitTime = Math.random() * 300 + 100;
-    this.timer = 0;
-    this.opacity = 0;
-  }
-
-  update() {
-    if (!this.active) {
-      this.timer++;
-      if (this.timer > this.waitTime) this.active = true;
-      return;
-    }
-
-    this.x -= this.speed;
-    this.y += this.speed * 0.8;
-    this.opacity = Math.min(1, this.opacity + 0.1);
-
-    if (this.x < -this.len || this.y > height + this.len) {
-      this.reset();
-    }
-  }
-
-  draw() {
-    if (!this.active) return;
-
-    const grad = ctx.createLinearGradient(
-      this.x,
-      this.y,
-      this.x + this.len,
-      this.y - this.len * 0.8,
-    );
-    grad.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
-    grad.addColorStop(1, `rgba(255, 255, 255, 0)`);
-
-    ctx.beginPath();
-    ctx.moveTo(this.x, this.y);
-    ctx.lineTo(this.x + this.len, this.y - this.len * 0.8);
-    ctx.lineWidth = this.size;
-    ctx.strokeStyle = grad;
-    ctx.stroke();
-  }
-}
-
 function initParticles() {
   stars = [];
   const particleCount = Math.min(Math.floor(window.innerWidth / 5), 400);
   for (let i = 0; i < particleCount; i++) {
     stars.push(new Star());
   }
-  shootingStar = new ShootingStar();
 }
 initParticles();
 
@@ -193,11 +137,6 @@ function animate() {
     star.update();
     star.draw();
   });
-
-  if (shootingStar) {
-    shootingStar.update();
-    shootingStar.draw();
-  }
 
   requestAnimationFrame(animate);
 }
