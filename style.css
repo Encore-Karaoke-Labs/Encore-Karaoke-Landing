@@ -402,6 +402,8 @@ nav {
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
 }
 
 .feature-tab:hover {
@@ -432,6 +434,31 @@ nav {
 .feature-tab.active h3 {
   color: var(--encore-blue);
   text-shadow: 0 0 10px rgba(77, 184, 255, 0.4);
+}
+
+.feature-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: var(--encore-blue);
+  width: 0;
+  opacity: 0.9;
+  box-shadow: 0 0 10px var(--encore-blue);
+}
+
+.feature-tabs:not(.user-interacted) .feature-tab.active::after {
+  animation: tabProgress 5s linear forwards;
+}
+
+@keyframes tabProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .more-features {

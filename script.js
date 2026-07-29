@@ -160,12 +160,12 @@ window.addEventListener("scroll", () => {
 
 const featureTabs = document.querySelectorAll(".feature-tab");
 const showcaseItems = document.querySelectorAll(".showcase-item");
+const tabsContainer = document.querySelector(".feature-tabs");
 
 let currentTabIndex = 0;
 let autoProgressInterval;
-const CYCLE_DELAY = 5000; // Time in milliseconds (5 seconds per tab)
+const CYCLE_DELAY = 5000;
 
-// Function to handle switching tabs
 function activateTab(index) {
   featureTabs.forEach((t) => t.classList.remove("active"));
   showcaseItems.forEach((item) => item.classList.remove("active"));
@@ -191,9 +191,8 @@ autoProgressInterval = setInterval(nextTab, CYCLE_DELAY);
 featureTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
     clearInterval(autoProgressInterval);
-
+    tabsContainer.classList.add("user-interacted");
     if (tab.classList.contains("active")) return;
-
     currentTabIndex = index;
     activateTab(currentTabIndex);
   });
