@@ -171,10 +171,10 @@ nav {
 
 .hero {
   min-height: 100vh;
+  min-width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   text-align: left;
   padding: 0 5%;
   position: relative;
@@ -184,6 +184,17 @@ nav {
     #0a0f1e 0%,
     var(--bg-main) 100%
   );
+}
+
+.hero img {
+  display: none;
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  top: 50%;
+  left: 55%;
+  transform: translateY(-50%);
+  z-index: 100;
 }
 
 #constellation-bg {
@@ -264,8 +275,8 @@ nav {
 .hero p {
   font-size: 1.5rem;
   color: #cbd5e1;
-  max-width: 800px;
-  margin: 0 auto 2.5rem auto;
+  max-width: 600px;
+  margin: 0 auto 2.5rem 0;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
@@ -633,6 +644,18 @@ footer {
   justify-content: space-between;
   align-items: center;
   color: #64748b;
+}
+
+@media (min-width: 1000px) {
+  .hero img {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero img {
+    left: 60%;
+  }
 }
 
 @media (min-width: 900px) {
