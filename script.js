@@ -161,20 +161,40 @@ window.addEventListener("scroll", () => {
 const featureTabs = document.querySelectorAll(".feature-tab");
 const showcaseItems = document.querySelectorAll(".showcase-item");
 
-featureTabs.forEach((tab) => {
+let currentTabIndex = 0;
+let autoProgressInterval;
+const CYCLE_DELAY = 5000; // Time in milliseconds (5 seconds per tab)
+
+// Function to handle switching tabs
+function activateTab(index) {
+  featureTabs.forEach((t) => t.classList.remove("active"));
+  showcaseItems.forEach((item) => item.classList.remove("active"));
+
+  const tab = featureTabs[index];
+  tab.classList.add("active");
+
+  const targetId = tab.getAttribute("data-target");
+  const targetItem = document.getElementById(targetId);
+
+  if (targetItem) {
+    targetItem.classList.add("active");
+  }
+}
+
+function nextTab() {
+  currentTabIndex = (currentTabIndex + 1) % featureTabs.length;
+  activateTab(currentTabIndex);
+}
+
+autoProgressInterval = setInterval(nextTab, CYCLE_DELAY);
+
+featureTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
+    clearInterval(autoProgressInterval);
+
     if (tab.classList.contains("active")) return;
 
-    featureTabs.forEach((t) => t.classList.remove("active"));
-    showcaseItems.forEach((item) => item.classList.remove("active"));
-
-    tab.classList.add("active");
-
-    const targetId = tab.getAttribute("data-target");
-    const targetItem = document.getElementById(targetId);
-
-    if (targetItem) {
-      targetItem.classList.add("active");
-    }
+    currentTabIndex = index;
+    activateTab(currentTabIndex);
   });
 });
