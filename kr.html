@@ -28,10 +28,12 @@
   </head>
   <body>
     <nav>
-      <div class="nav-logo">Encore</div>
+      <a class="nav-logo" href="kr.html">Encore</a>
       <div class="nav-links">
-        <!-- <a href="#control" target="_blank">노래방 책자</a> -->
-        <a href="request.html" target="_blank">곡 신청</a>
+        <a href="https://studio.encorekaraoke.org" target="_blank"
+          >MIDI 스튜디오</a
+        >
+        <a href="#features">기능</a>
         <a
           href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke/releases"
           class="btn btn-nav"
@@ -40,92 +42,186 @@
         >
       </div>
     </nav>
+
     <section class="hero">
-      <h1 class="scroll-anim">
-        <span class="text-highlight-orange">눈부시게 빛나는</span><br /><span
-          class="text-highlight-gold"
-          >스타</span
-        >가 되어보세요.
-      </h1>
-      <p class="scroll-anim delay-1">
-        Encore Karaoke는 전문가급 노래방 환경을 합리적이고 쉽게 접할 수 있으며,
-        완전히 잊지 못할 추억으로 만들어주는 오픈소스 노래방 플레이어입니다.
-      </p>
-      <div class="hero-buttons scroll-anim delay-2">
-        <a
-          href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke/releases"
-          class="btn btn-gold"
-          target="_blank"
-          >무료로 노래 시작하기</a
-        >
-        <a href="#features" class="btn btn-outline">기능 살펴보기</a>
+      <canvas id="constellation-bg"></canvas>
+      <div class="hero-content">
+        <h1>
+          <span
+            class="text-highlight-orange hero-badge-orange"
+            style="animation-delay: 0s"
+            >눈부시게 빛나는</span
+          ><br />
+          <span class="text-highlight-gold hero-badge-gold">스타</span
+          ><span class="hero-text-part" style="animation-delay: 0.25s"
+            >가 되어보세요.</span
+          >
+        </h1>
+        <p class="hero-fade-in" style="animation-delay: 0.55s">
+          Encore Karaoke는 전문가급 노래방 환경을 합리적이고 쉽게 접할 수
+          있으며, 완전히 잊지 못할 추억으로 만들어주는 오픈소스 노래방
+          플레이어입니다.
+        </p>
+        <div class="hero-buttons hero-fade-in" style="animation-delay: 0.7s">
+          <a
+            href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke/releases"
+            class="btn btn-gold"
+            target="_blank"
+            >무료로 노래 시작하기</a
+          >
+          <a href="#features" class="btn btn-outline">기능 살펴보기</a>
+        </div>
       </div>
+      <img src="assets/hero-img.png" alt="Hero image" />
     </section>
-    <section id="features" class="section section-alt">
+
+    <section id="features" class="section">
       <div class="section-header scroll-anim">
         <h2 class="section-title">
-          이 기능들과 함께
-          <span class="text-highlight-gold">스타가 되어보세요</span>
+          노래방 매니아에 의한, 노래방 매니아를 위한 기능.
         </h2>
-        <p class="section-subtitle">
-          여러분이 사랑하는 아시아의 노래방 경험을 Encore에서 모두 만나보세요.
-        </p>
       </div>
-      <div class="grid">
-        <div class="card scroll-anim">
-          <div class="card-icon">🎵</div>
-          <h3>생생한 노래방 사운드</h3>
-          <p>
-            <i>고음의 달인</i>이든 아니든, Encore는 정통 비디오케 경험을
-            제공합니다. 실제 기계를 재현한 사운드부터 번호를 입력해 노래를
-            예약하는 전통적인 방식까지 모두 즐겨보세요!
-          </p>
+
+      <div class="feature-container scroll-anim delay-1">
+        <div class="showcase-display">
+          <div class="showcase-item active" id="showcase-sound">
+            <img src="assets/mixer.png" alt="Encore mixer" />
+          </div>
+          <div class="showcase-item" id="showcase-record">
+            <img src="assets/recorder.jpg" alt="Encore recorder" />
+          </div>
         </div>
 
-        <div class="card scroll-anim delay-1">
-          <div class="card-icon">📺</div>
-          <h3>노래, 춤, 혹은 둘 다!</h3>
-          <p>
-            멋진 고화질 뮤직비디오를 배경으로 좋아하는 노래를 마음껏 불러보세요.
-            좋아하는 곡에 맞춰 노래하거나 춤추거나, 혹은 둘 다 즐겨보세요!
-          </p>
+        <div class="feature-tabs">
+          <div class="feature-tab active" data-target="showcase-sound">
+            <h3>스타처럼 노래하세요</h3>
+            <p>
+              Encore의 오디오 믹서로 당신의 목소리를 더욱 풍성하고 빛나게
+              만들어보세요!
+            </p>
+          </div>
+          <div class="feature-tab" data-target="showcase-record">
+            <h3>스타처럼 녹음하세요</h3>
+            <p>
+              Encore의 녹화 및 녹음 기능으로 노래방에서의 밤을 잊지 못할
+              추억으로 남겨보세요!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="more-features">
+        <div class="section-header scroll-anim">
+          <h3 class="section-title" style="font-size: 2.5rem; margin-top: 6rem">
+            노래방 플레이어에 바라는 모든 기능, 그 이상을 담았습니다.
+          </h3>
         </div>
 
-        <div class="card scroll-anim delay-2">
-          <div class="card-icon">🎙️</div>
-          <h3>마법 같은 순간을 기록하세요</h3>
-          <p>
-            완벽했던 고음을 그냥 날려 보내지 마세요. 녹음 버튼을 눌러 당신의
-            노래를 즉시 저장하고, 나중에 다시 듣거나 친구들과 공유하며 즐거운
-            시간을 보내세요.
-          </p>
+        <div class="bento-grid">
+          <div class="bento-item scroll-anim delay-1">
+            <div class="bento-icon">
+              <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <div class="bento-text">
+              <h4>정밀한 점수 측정</h4>
+              <p>
+                친구들과 경쟁하거나 노래 연습에 활용해보세요! 음정과 박자에 대한
+                정확한 피드백을 실시간으로 제공합니다.
+              </p>
+            </div>
+            <img src="assets/bento/1.png" alt="Advanced scoring" />
+          </div>
+
+          <div class="bento-item scroll-anim delay-2">
+            <div class="bento-icon">
+              <ion-icon name="language-outline"></ion-icon>
+            </div>
+            <div class="bento-text">
+              <h4>자동 발음 기호 변환</h4>
+              <p>
+                가사를 전혀 읽지 못해도 걱정하지 마세요. 좋아하는 외국 노래를
+                자동으로 생성된 발음 기호로 쉽게 부를 수 있습니다.
+              </p>
+            </div>
+            <img src="assets/bento/2.png" alt="Romanization" />
+          </div>
+
+          <div class="bento-item scroll-anim delay-1">
+            <div class="bento-icon">
+              <ion-icon name="images-outline"></ion-icon>
+            </div>
+            <div class="bento-text">
+              <h4>커스텀 배경</h4>
+              <p>
+                원하는 배경 비디오나 이미지를 쉽게 불러와 가사 뒤에 띄울 수
+                있습니다.
+              </p>
+            </div>
+            <img src="assets/bento/3.png" alt="Backgrounds" />
+          </div>
+
+          <div class="bento-item scroll-anim delay-2">
+            <div class="bento-icon">
+              <ion-icon name="folder-open-outline"></ion-icon>
+            </div>
+            <div class="bento-text">
+              <h4>폭넓은 호환성</h4>
+              <p>
+                MIDI 및 MP3+G에 최적화되어 있으며, 널리 쓰이는 오디오 및 비디오
+                형식도 지원합니다.
+              </p>
+            </div>
+            <img src="assets/bento/4.png" alt="Formats" />
+          </div>
         </div>
       </div>
     </section>
+
     <footer id="download">
-      <div class="footer-logo scroll-anim">ENCORE KARAOKE</div>
-
-      <div class="footer-links scroll-anim delay-1">
-        <a href="https://company.encorekaraoke.org">회사 소개</a>
-        <a href="mailto:sky@encorekaraoke.org">고객 지원</a>
+      <div class="footer-grid">
+        <div class="footer-brand scroll-anim">
+          <h2>ENCORE</h2>
+          <p>
+            오픈소스 노래방 소프트웨어로 모두가 스타가 된 것처럼 느낄 수 있도록.
+          </p>
+        </div>
+        <div class="footer-col scroll-anim delay-1">
+          <h4>리소스</h4>
+          <a
+            href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke/releases"
+            >다운로드
+          </a>
+          <a href="#features">기능</a>
+          <a href="request.html">곡 신청</a>
+        </div>
+        <div class="footer-col scroll-anim delay-2">
+          <h4>관련 링크</h4>
+          <a
+            href="https://github.com/Encore-Karaoke-Labs/Encore-Karaoke"
+            target="_blank"
+            >GitHub</a
+          >
+          <a href="https://company.encorekaraoke.org">회사 소개</a>
+          <a href="mailto:sky@encorekaraoke.org">고객 지원</a>
+        </div>
       </div>
-
-      <p
-        class="scroll-anim delay-2"
-        style="
-          font-size: 1.2rem;
-          color: #94a3b8;
-          max-width: 600px;
-          margin: 0 auto;
-        "
-      >
-        모두가 스타가 된 것처럼 느낄 수 있도록.
-      </p>
-
-      <div class="copyright scroll-anim delay-3">
-        마닐라에 위치한 Encore Karaoke Labs에서 ❤️를 담아 만들었습니다.
+      <div class="footer-bottom scroll-anim delay-3">
+        <div class="copyright">
+          &copy; 2026 Encore Karaoke Labs by Kessei, based in Manila.
+        </div>
+        <div class="made-with">
+          노래방으로 하나 된 두 사람이 함께 만들었습니다.
+        </div>
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
