@@ -345,10 +345,8 @@ nav {
 
 .showcase-display {
   width: 100%;
-  aspect-ratio: 16/7;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-soft);
-  border-radius: 24px;
+  aspect-ratio: 16/9.7;
+  border-radius: px;
   backdrop-filter: blur(10px);
   box-shadow:
     inset 0 0 20px rgba(255, 255, 255, 0.02),
@@ -386,19 +384,19 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: 8px;
 }
 
 .feature-tabs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
 .feature-tab {
   background: rgba(15, 20, 35, 0.4);
   border: 1px solid var(--border-soft);
-  border-radius: 16px;
+  border-radius: 24px;
   padding: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -602,9 +600,8 @@ footer {
 
 .footer-brand h2 {
   font-size: 2.5rem;
-  color: var(--encore-gold);
   margin-bottom: 1rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
