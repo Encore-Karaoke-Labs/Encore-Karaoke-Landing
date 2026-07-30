@@ -473,7 +473,7 @@ nav {
   margin-top: 6rem;
 }
 
-.sessions-showcase .more-features {
+.more-features {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -579,6 +579,10 @@ nav {
     margin: 0;
   }
 
+  .bento-item img {
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  }
+
   .bento-item:hover .bento-text h4 {
     margin-bottom: 0.5rem;
     transform: translateY(0);
@@ -588,6 +592,10 @@ nav {
     opacity: 1;
     max-height: 120px;
     transform: translateY(0);
+  }
+
+  .bento-item:hover img {
+    transform: scale(1.05);
   }
 }
 
