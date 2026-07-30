@@ -461,9 +461,26 @@ nav {
   }
 }
 
-.more-features {
+.sessions-showcase {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sessions-showcase h3 {
+  font-size: 2.5rem;
+  margin-top: 6rem;
+}
+
+.sessions-showcase .more-features {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.more-features h3 {
+  font-size: 2.5rem;
+  margin-top: 6rem;
 }
 
 .bento-grid {
