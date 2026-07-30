@@ -473,6 +473,18 @@ nav {
   margin-top: 6rem;
 }
 
+.enmoku-showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.enmoku-showcase h3 {
+  font-size: 2.5rem;
+  margin-top: 6rem;
+}
+
 .more-features {
   max-width: 1200px;
   margin: 0 auto;
