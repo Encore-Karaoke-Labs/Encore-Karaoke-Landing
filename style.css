@@ -330,6 +330,12 @@ nav {
   margin-bottom: 4rem;
 }
 
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
 .section-title {
   font-size: 3.5rem;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
