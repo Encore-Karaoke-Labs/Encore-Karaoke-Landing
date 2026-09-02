@@ -1,11 +1,11 @@
 [[redirects]]
-from = "/*"
-to = "/404.html"
-status = 404
-force = false
-
-[[redirects]]
 from = "/misskonasiya"
 to = "/index.html"
 status = 200
+force = true
+
+[[redirects]]
+from = "/*"
+to = "/404.html"
+status = 404
 force = false
