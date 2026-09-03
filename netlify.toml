@@ -5,6 +5,12 @@ status = 200
 force = true
 
 [[redirects]]
+from = "/calltostardomauditions"
+to = "https://docs.google.com/forms/d/e/1FAIpQLSfKkXvGJVkULMJZsmsv_MqJqVIHxJoOX0k55SiESJ54P2Ed2A/viewform?usp=dialog"
+status = 200
+force = true
+
+[[redirects]]
 from = "/*"
 to = "/404.html"
 status = 404
